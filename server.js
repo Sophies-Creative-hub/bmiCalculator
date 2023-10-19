@@ -7,5 +7,3 @@ app.use(express.static('frontend'));
 app.listen(PORT, () => {
     console.log(`Server listening on port ${PORT}`);
 });
-
-export {app};
