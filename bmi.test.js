@@ -3,9 +3,9 @@ import { app } from './server';
 
 
 test('Berechnung des BMI', () => {
-  expect(calculateBMI(70, 175)).toBeCloseTo(22.86, 2);
-  expect(calculateBMI(85, 190)).toBeCloseTo(23.55, 2);
-  expect(calculateBMI(65, 160)).toBeCloseTo(25.39, 2);
+  expect(calculateBMI(70, 175)).toBe(23);
+  expect(calculateBMI(85, 190)).toBe(24);
+  expect(calculateBMI(65, 160)).toBe(25);
 });
 
 
