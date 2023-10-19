@@ -19,3 +19,5 @@ function calculateBMI(weight, height) {
 }
 
 updateUI();
+
+export { calculateBMI };
