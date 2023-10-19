@@ -8,4 +8,4 @@ app.listen(PORT, () => {
     console.log(`Server listening on port ${PORT}`);
 });
 
-export { app, server };
+export {app};
