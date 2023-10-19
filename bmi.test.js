@@ -7,10 +7,3 @@ test('Berechnung des BMI', () => {
   expect(calculateBMI(85, 190)).toBe(24);
   expect(calculateBMI(65, 160)).toBe(25);
 });
-
-
-afterAll((done) => {
-    app.close(() => {
-      done();
-    });
-  });
