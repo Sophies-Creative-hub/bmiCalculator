@@ -12,8 +12,8 @@ function updateUI() {
 
 function calculateBMI(weight, height) {
     // Logik zur Berechnung des BMI hier
-	const heightInMeters = height / 100; // Umrechnung von Zentimetern in Meter
-    const bmi = weight / (heightInMeters * heightInMeters);
+    const heightInMeters = height / 100; // Umrechnung von Zentimetern in Meter
+    const bmi = Math.round(weight / (heightInMeters * heightInMeters));
     return bmi;
 
 }
