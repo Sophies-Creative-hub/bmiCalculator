@@ -19,6 +19,6 @@ function calculateBMI(weight, height) {
 
 }
 
-updateUI();
+//updateUI();
 
 export { calculateBMI };
