@@ -1,6 +1,4 @@
 import { calculateBMI } from './frontend/main';
-import { app } from './server';
-
 
 test('Berechnung des BMI', () => {
   expect(calculateBMI(70, 175)).toBe(23);
