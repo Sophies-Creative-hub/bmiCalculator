@@ -1,5 +1,5 @@
-import { calculateBMI } from 'server';
-import { app, server } from 'server';
+import { calculateBMI } from './server';
+import { app, server } from './server';
 
 
 test('Berechnung des BMI', () => {
