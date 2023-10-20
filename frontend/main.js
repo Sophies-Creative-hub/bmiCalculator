@@ -2,6 +2,9 @@ const calculateButton = document.getElementById('calculateButton');
 calculateButton.addEventListener('click', calculateAndDisplayBMI);
 
 function calculateAndDisplayBMI() {
+    if (typeof document !== 'undefined') {
+        return;
+    }
     const weight = document.getElementById('weight').value;
     const height = document.getElementById('height').value;
     const bmi = calculateBMI(weight, height);
