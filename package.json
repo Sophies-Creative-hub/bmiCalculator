@@ -15,8 +15,5 @@
     "devDependencies": {
         "jest": "^27.2.0",
         "nodemon": "^3.0.1"
-    },
-    "jest":{
-    "testEnvironment": "jsdom"
     }
 }
