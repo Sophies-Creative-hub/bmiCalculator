@@ -6,7 +6,8 @@
     "type": "module",
     "scripts": {
         "start": "nodemon server.js",
-        "test":"NODE_OPTIONS=--experimental-vm-modules npx jest --outputFile=test-results/test-results.json",
+        "test":"NODE_OPTIONS=--experimental-vm-modules npx jest",
+        "test:generate-output": "jest --json --outputFile=test-results/test-results.json",
         "start-prod": "npm start"
     },
     "dependencies": {
