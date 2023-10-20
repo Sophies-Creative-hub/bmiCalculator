@@ -23,33 +23,7 @@ jobs:
 
       - name: Run Jest tests
         run: npm test
-
-        name: BMI Calculator
-
-on:
-  push:
-    branches:
-      - main
-
-jobs:
-  calculating:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '14'
-
-      - name: Install Dependencies
-        run: npm install
-
-      - name: Run Jest tests
-        run: npm test
-
+        
       - name: Upload Test Results as Artifact
         uses: actions/upload-artifact@v2
         with:
