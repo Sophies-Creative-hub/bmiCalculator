@@ -17,3 +17,4 @@ function calculateBMI(weight, height) {
     return bmi;
 
 }
+export { calculateBMI };
