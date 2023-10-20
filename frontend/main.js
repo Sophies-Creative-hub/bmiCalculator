@@ -1,14 +1,12 @@
-Array.from(document.getElementsByTagName('input')).forEach(element => {
-    element.addEventListener('change', updateUI);
-});
+const calculateButton = document.getElementById('calculateButton');
+calculateButton.addEventListener('click', calculateAndDisplayBMI);
 
-function updateUI() {
-    if (typeof document !== 'undefined') {
-        const weight = document.getElementById('weight').value;
-        const height = document.getElementById('height').value;
-        const bmi = calculateBMI(weight, height);
-        console.log("weight: %s, height: %s, bmi: %s", weight, height, bmi);
-    }
+function calculateAndDisplayBMI() {
+    const weight = document.getElementById('weight').value;
+    const height = document.getElementById('height').value;
+    const bmi = calculateBMI(weight, height);
+    const resultElement = document.getElementById('result');
+    resultElement.innerHTML = `Dein BMI beträgt: ${bmi}`;
 }
 
 function calculateBMI(weight, height) {
@@ -18,7 +16,5 @@ function calculateBMI(weight, height) {
     return bmi;
 
 }
-
-//updateUI();
 
 export { calculateBMI };
