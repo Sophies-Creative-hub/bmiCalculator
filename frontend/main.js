@@ -1,20 +1,11 @@
-Array.from(document.getElementsByTagName('input')).forEach(element => {
-    element.addEventListener('change', updateUI);
-});
-
-function updateUI() {
-    // Logik zur Aktualisierung des UI hier
+function calculateBMI() {
     const weight = document.getElementById('weight').value;
     const height = document.getElementById('height').value;
-    const bmi = calculateBMI(weight, height);
-    console.log("weight: %s, height: %s, bmi: %s", weight, height, bmi);
+    const bmi = weight / ((height / 100) ** 2); // BMI calculation formula
+    updateUI(bmi);
 }
 
-function calculateBMI(weight, height) {
-    // Logik zur Berechnung des BMI hier
-		const heightInMeters = height / 100; // Umrechnung von Zentimetern in Meter
-    const bmi = Math.round(weight / (heightInMeters * heightInMeters));
-    return bmi;
-
+function updateUI(bmi) {
+    const result = document.getElementById('result');
+    result.innerHTML = `Dein BMI ist ${bmi.toFixed(2)}.`;
 }
-export { calculateBMI };
