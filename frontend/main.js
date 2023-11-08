@@ -9,3 +9,5 @@ function updateUI(bmi) {
     const result = document.getElementById('result');
     result.innerHTML = `Dein BMI ist ${bmi.toFixed(2)}.`;
 }
+
+export { calculateBMI };
