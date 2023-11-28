@@ -1,4 +1,4 @@
-import { calculateBMI } from './frontend/main';
+const calculateBMI = require('./frontend/main');
 
 test('Berechnung des BMI', () => {
   expect(calculateBMI(70, 175)).toBe(23);
