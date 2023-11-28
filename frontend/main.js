@@ -18,4 +18,4 @@ function calculateBMI(weight, height) {
 
 }
 
-export { calculateBMI };
+module.exports = calculateBMI;
