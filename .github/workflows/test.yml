@@ -1,0 +1,31 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  cypress-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v4
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '14' # Aktualisiert auf eine stabile LTS-Version von Node.js
+
+    - name: Install Dependencies
+      run: npm install
+
+    - name: Start Web Server in Background
+      run: npm start &
+
+    - name: Wait for Server to Start
+      run: sleep 5 # Anpassen Sie die Wartezeit je nach Bedarf
+
+    - name: Run Cypress Tests
+      run: npm run test:e2e
