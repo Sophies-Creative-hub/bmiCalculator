@@ -37,3 +37,5 @@ function displayResults(bmi) {
     document.getElementById('result').innerText = `BMI: ${bmi}`;
 }
 
+// brauchen wir erst einmal nicht
+module.exports = { calculateBMI, updateUI };
