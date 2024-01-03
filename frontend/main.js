@@ -38,4 +38,4 @@ function displayResults(bmi) {
 }
 
 // brauchen wir erst einmal nicht
-module.exports = { calculateBMI, updateUI };
+//module.exports = { calculateBMI, updateUI };
